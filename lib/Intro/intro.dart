@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_walkthrough/flutter_walkthrough.dart';
 import 'package:flutter_walkthrough/walkthrough.dart';
+
 import '../Menu/menu.dart';
+import '../globals.dart' as globals;
 
 class Intro extends StatelessWidget {
   final List<Walkthrough> list = [
     Walkthrough(
       title: "Dérive",
-      content: "Book rides within your own organization",
+      content: "Welcome " +  globals.user.displayName,
       imageIcon: Icons.airport_shuttle,
     ),
     Walkthrough(

@@ -7,6 +7,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 import './Intro/intro.dart';
 import './Menu/menu.dart';
+import 'globals.dart' as globals;
 
 class SplashScreen extends StatefulWidget {
 
@@ -46,16 +47,16 @@ class _SplashScreenState extends State<SplashScreen> {
 
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  FirebaseUser user;
 
   void _handleSignIn() async {
     GoogleSignInAccount googleUser = await _googleSignIn.signIn();
     GoogleSignInAuthentication googleAuth = await googleUser.authentication;
-    user = await _auth.signInWithGoogle(
+    globals.user = await _auth.signInWithGoogle(
       accessToken: googleAuth.accessToken,
       idToken: googleAuth.idToken,
     );
-    print("signed in " + user.displayName);
+    checkFirstSeen();
+    print("signed in " + globals.user.displayName);
   }
 
   Future checkFirstSeen() async {
@@ -80,7 +81,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
       Duration(seconds: widget.seconds),
       () {
-        checkFirstSeen();
+
       }
     );
   }

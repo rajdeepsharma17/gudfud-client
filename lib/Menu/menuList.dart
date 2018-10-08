@@ -23,7 +23,7 @@ class MenuList extends StatelessWidget {
                 return Item(data[i]); 
               }),
         ),
-        CheckoutBar()
+        // CheckoutBar()
       ],
     );
     }
