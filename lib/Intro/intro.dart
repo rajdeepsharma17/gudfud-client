@@ -6,7 +6,7 @@ import '../Menu/menu.dart';
 class Intro extends StatelessWidget {
   final List<Walkthrough> list = [
     Walkthrough(
-      title: "Something",
+      title: "Dérive",
       content: "Book rides within your own organization",
       imageIcon: Icons.airport_shuttle,
     ),
