@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:map_view/map_view.dart';
 
-var api_key = "AIzaSyDrHKl8IxB4cGXIoELXQOzzZwiH1xtsRf4";
-void main() {
-  MapView.setApiKey(api_key);
-  runApp(new MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: new MapPage(),
-  ));
+var apikey = "AIzaSyDrHKl8IxB4cGXIoELXQOzzZwiH1xtsRf4";
+Widget main() {
+  MapView.setApiKey(apikey);
+  return MapPage();
 }
 
 class MapPage extends StatefulWidget {
@@ -18,7 +15,7 @@ class MapPage extends StatefulWidget {
 class _MapPageState extends State<MapPage> {
   MapView mapView = new MapView();
   CameraPosition cameraPosition;
-  var staticMapProvider = new StaticMapProvider(api_key);
+  var staticMapProvider = new StaticMapProvider(apikey);
   Uri staticMapUri;
 
   List<Marker> markers = <Marker>[
