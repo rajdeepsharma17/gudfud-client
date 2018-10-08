@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+import '../Maps/maps.dart';
+
 
 class Navigate extends StatelessWidget {
 
@@ -41,6 +43,10 @@ class Navigate extends StatelessWidget {
           ListTile(
             title: Text('Item 2'),
             onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MapPage()),
+              );
             },
           ),
         ],
