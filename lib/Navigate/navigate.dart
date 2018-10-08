@@ -1,26 +1,9 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
 import '../Maps/maps.dart';
 
 
 class Navigate extends StatelessWidget {
-
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-
-  Future<FirebaseUser> _handleSignIn() async {
-    GoogleSignInAccount googleUser = await _googleSignIn.signIn();
-    GoogleSignInAuthentication googleAuth = await googleUser.authentication;
-    FirebaseUser user = await _auth.signInWithGoogle(
-      accessToken: googleAuth.accessToken,
-      idToken: googleAuth.idToken,
-    );
-    print("signed in " + user.displayName);
-    return user;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +20,6 @@ class Navigate extends StatelessWidget {
           ListTile(
             title: Text('Item 1'),
             onTap: () {
-              _handleSignIn();
             },
           ),
           ListTile(
