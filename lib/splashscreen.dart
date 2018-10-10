@@ -56,7 +56,7 @@ class _SplashScreenState extends State<SplashScreen> {
       idToken: googleAuth.idToken,
     );
     checkFirstSeen();
-    print("signed in " + globals.user.displayName);
+    print("signed in " + globals.user.toString());
   }
 
   Future checkFirstSeen() async {

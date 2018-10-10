@@ -1,20 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Settings extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return SettingsState();
-  }
-
-}
-
-class SettingsState extends State<Settings>{
-
-  @override
-    void initState() {
-      super.initState();
-    }
-
+class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(body:
@@ -24,19 +10,25 @@ class SettingsState extends State<Settings>{
           pinned: true,
           expandedHeight: 100.0,
           flexibleSpace: const FlexibleSpaceBar(
-            title: const Text('Account Settings'),
+            title: const Text('About'),
           ),
         ),
-        new SliverFixedExtentList(
-          itemExtent: 50.0,
+        SliverGrid(
+          gridDelegate: new SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 200.0,
+            mainAxisSpacing: 10.0,
+            crossAxisSpacing: 10.0,
+            childAspectRatio: 4.0,
+          ),
           delegate: new SliverChildBuilderDelegate(
             (BuildContext context, int index) {
-              return new Container(
+              return Card(child: Container(
                 alignment: Alignment.center,
-                color: Colors.lightBlue[100 * (index % 9)],
-                child: new Text('list item $index'),
-              );
+                color: Colors.teal[100 * (index % 9)],
+                child: new Text('grid item $index'),
+              ));
             },
+            childCount: 20,
           ),
         ),
       ],

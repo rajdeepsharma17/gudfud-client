@@ -4,6 +4,7 @@ import '../Maps/maps.dart';
 import '../settings.dart';
 import '../Menu/menu.dart';
 import '../share.dart';
+import '../about.dart';
 
 
 class Navigate extends StatelessWidget {
@@ -59,7 +60,7 @@ class Navigate extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MapPage()),
+                MaterialPageRoute(builder: (context) => About()),
               );
             },
           ),
