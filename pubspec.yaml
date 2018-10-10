@@ -21,6 +21,7 @@ dependencies:
   map_view:
   flutter_walkthrough:
   shared_preferences: ^0.4.3
+  firebase_database: ^1.0.4
   
 
   # The following adds the Cupertino Icons font to your application.
