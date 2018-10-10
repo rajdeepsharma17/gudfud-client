@@ -5,9 +5,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-import './Intro/intro.dart';
-import './Menu/menu.dart';
-import 'globals.dart' as globals;
+import './intro.dart';
+import '../Menu/menu.dart';
+import '../utils/globals.dart' as globals;
 
 class SplashScreen extends StatefulWidget {
 
@@ -55,6 +55,9 @@ class _SplashScreenState extends State<SplashScreen> {
       accessToken: googleAuth.accessToken,
       idToken: googleAuth.idToken,
     );
+
+    
+
     checkFirstSeen();
     print("signed in " + globals.user.toString());
   }

@@ -3,7 +3,7 @@ import 'package:flutter_walkthrough/flutter_walkthrough.dart';
 import 'package:flutter_walkthrough/walkthrough.dart';
 
 import '../Menu/menu.dart';
-import '../globals.dart' as globals;
+import '../utils/globals.dart' as globals;
 
 class Intro extends StatelessWidget {
   final List<Walkthrough> list = [

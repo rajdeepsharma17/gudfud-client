@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../Maps/maps.dart';
-import '../settings.dart';
+import './settings.dart';
 import '../Menu/menu.dart';
-import '../share.dart';
-import '../about.dart';
+import './share.dart';
+import './about.dart';
 
 
 class Navigate extends StatelessWidget {

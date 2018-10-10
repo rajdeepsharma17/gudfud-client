@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 
-import './splashscreen.dart';
+import './Intro/splashscreen.dart';
 
 void main() => runApp(MyApp());
 
